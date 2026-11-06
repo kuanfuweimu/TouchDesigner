@@ -1,0 +1,5 @@
+*.bkp*
+*.toe.dir/
+*.tox.dir/
+*.toc
+__pycache__/

@@ -1,0 +1,40 @@
+{
+  "firstLFO": [
+    0.03471161425113678,
+    0.49876388907432556
+  ],
+  "firstShape": [
+    720,
+    1280,
+    4
+  ],
+  "secondLFO": [
+    0.007046958431601524,
+    0.03863786906003952
+  ],
+  "meanFrameDifference": 0.052349384874105453,
+  "finalShape": [
+    2160,
+    3840,
+    4
+  ],
+  "finalNonzeroPixels": 24883200,
+  "errors": [],
+  "nullColorsValid": true,
+  "positionRouting": {
+    "Positions": [
+      "/project1/GaussianBreathing/GaussianSplat/noise_position"
+    ],
+    "CalculateColors": [
+      "/project1/GaussianBreathing/GaussianSplat/Positions"
+    ],
+    "Sort": [
+      "/project1/GaussianBreathing/GaussianSplat/Positions"
+    ],
+    "Scale": [
+      "/project1/GaussianBreathing/GaussianSplat/noise_scale"
+    ]
+  },
+  "tdBuild": "2025.32460",
+  "resolution": "3840 x 2160 verified; 1280 x 720 preview verified"
+}
