@@ -12,12 +12,16 @@ Based on Tim Gerritsen's original renderer; adds the tutorial's position noise a
 
 Unzip the entire package and open GaussianBreathing.toe. Keep assets beside the project. Preview switches between 4K and 720p. Import the TOX into another project and reselect the supplied PLY when its project folder differs.
 
+English setup details: Select `/project1/GaussianBreathing` and use its Breathing page; the timeline must be playing. `null_output` is the final TOP. `cam_preview` and `null_target` control the camera; the original `cameraViewport` remains inside. When importing the TOX elsewhere, select `assets/hornedlizard-preview.ply` in Splat file.
+
 ## 参数 / Controls
 - Position motion：位置扰动幅度，默认 0.035；设 0 关闭。Position noise amplitude.
 - Scale breathing：对数尺度扰动，默认 0.5；设 0 关闭。Log-scale noise amplitude.
 - Position / Scale frequency：两路独立呼吸频率，默认 0.073 / 0.11 Hz。
 - Noise travel speed：噪声移动速度，默认 0.08。
 - Alpha threshold / Splat size：透明度裁切 / 整体高斯尺寸。
+
+English defaults: Position motion = 0.035; Scale breathing = 0.5; set either to zero to disable it. Position/Scale frequencies = 0.073/0.11 Hz; Noise travel speed = 0.08. Alpha threshold controls opacity cutoff; Splat size controls global Gaussian size.
 
 ## 素材与限制 / Assets and limits
 这不是视频植物的逐像素复刻。植物扫描位于作者 Patreon，本包未访问、未购买或复制该付费素材。这里用 Derivative POPs 示例 hornedlizard.spz 转换为 Gaussian PLY，并抽样至 220,000 个 splat，适合验证动画机制；抽样与新机位会暴露扫描空洞和飞点。
@@ -26,9 +30,15 @@ The tutorial's plant scan is not included. The supplied lizard is a public Deriv
 原版组件需要包含 opacity、f_dc_*、f_rest_*、scale_*、rot_* 的 Gaussian PLY；普通网格 PLY 不能直接替代。原生 SPZ 属性名称不同，不要直接选 SPZ。换自己的模型后，需调整 cam_preview、null_target 并触发内部 GaussianSplat 的 Reload。
 This renderer expects Gaussian PLY, not mesh PLY or native SPZ. Reframe the camera after replacing the scan.
 
+English details: The tutorial’s Patreon plant was not accessed, purchased or copied. Gaussian PLY must contain `opacity`, `f_dc_*`, `f_rest_*`, `scale_*` and `rot_*`; mesh PLY is not a substitute. SPZ uses different attributes and must be converted first. After replacing the file, reframe `cam_preview` / `null_target` and trigger GaussianSplat → Reload.
+
 ## 验证 / Validation
 TouchDesigner 2025.32460：运行时节点错误为零；两路 LFO 数值与两帧图像均发生变化；实际读取到 3840 × 2160 输出及 1280 × 720 预览。Null 颜色为 #2F59AD。验证详情见 validation.json。
 The final project uses relative asset paths and excludes the development filesystem command listener. No desktop UI automation was used. Interactive desktop usability and sustained FPS were not benchmarked.
+
+English runtime evidence: TouchDesigner 2025.32460 reported no node errors. Both LFO values and rendered frames changed. Actual 3840 × 2160 output and 1280 × 720 preview were inspected. Null color is #2F59AD; see validation.json.
+
+工程采用相对素材路径，不包含开发阶段的文件命令监听器。没有使用桌面自动化；未进行持续 FPS 或桌面交互体验基准测试。不承诺帧率。
 
 ## 来源 / Credits
 - Tim Gerritsen Gaussian Splatting asset: https://derivative.ca/community-post/asset/gaussian-splatting/69107
@@ -40,3 +50,5 @@ The final project uses relative asset paths and excludes the development filesys
 LIULI Year of the Dragon Glass Sculpture Splat — UniconeDesign: https://poly.cam/capture/73CF32ED-F550-492E-BAF3-C5FA5DE8845E
 
 尚未下载或接入此琉璃龙模型；当前工程仍使用蜥蜴扫描。This requested dragon model has not been downloaded or integrated.
+
+来源说明：组件为 Tim Gerritsen 原作，动画参考 Lake Heckaman 教程，示例来自 Derivative POPs。原组件保存在 `assets/GaussianSplatting-1.0-original.tox`；再分发前应查看原素材条款，原作者权利保留。
