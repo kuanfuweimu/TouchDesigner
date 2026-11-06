@@ -1,0 +1,27 @@
+{
+  "input": "textured-sphere.glb",
+  "output": "textured-sphere-gs.ply",
+  "method": "anisotropic surface sampling, not trained 3DGS",
+  "points": 100000,
+  "parts": 1,
+  "bounds": [
+    [
+      -0.9993782639503479,
+      -0.9996354579925537,
+      -0.9998067617416382
+    ],
+    [
+      0.9998356103897095,
+      0.9993808269500732,
+      0.9996093511581421
+    ]
+  ],
+  "seed": 7,
+  "warnings": [],
+  "limitations": [
+    "No reflection/refraction or lighting baking",
+    "No animation",
+    "FBX/Blend must be exported to GLB",
+    "Alpha blending and material extensions are approximated"
+  ]
+}

@@ -3,3 +3,4 @@
 *.tox.dir/
 *.toc
 __pycache__/
+.venv/

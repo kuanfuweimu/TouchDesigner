@@ -17,3 +17,9 @@ Download the repository ZIP, extract all files, and open the TOE. Keep the asset
 ![720p preview](TouchDesigner-Gaussian-Breathing/preview-1280x720.png)
 
 Original component and sample remain credited to their authors; no blanket license is granted over third-party assets. See the project README for sources and validation limits.
+
+## Mesh to GS / 普通 3D 转高斯
+
+[工具与操作说明](Mesh-to-GS/README.md)：GLB / GLTF / OBJ / mesh PLY / STL → Gaussian PLY。包含 Windows 文件选择启动器、转换源码、示例和 TD 查看器。采用网格表面采样，非训练重建；不转换动画。FBX 先导出 GLB。
+
+同时修复 GaussianBreathing 容器宽高的相对路径表达式错误。
